@@ -33,6 +33,7 @@
         </select>
         <input type="submit" name="submit" vlaue="Choose options">
     </form>
+    <div class="bg-primary"></div>
     <?php
       if(isset($_POST['submit'])){
         if(!empty($_POST['Fruits'])) {
