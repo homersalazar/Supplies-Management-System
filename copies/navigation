@@ -1,0 +1,7 @@
+<div class="sidenav">
+  <a href="#"><i class="fa fa-cubes"> Dashboard</i></a>
+  <a href="#"><i class="fa fa-cart-plus"> Items</i></a>
+  <a href="#"><i class="fa fa-retweet"> Orders</i></a>
+  <a href="#"><i class="fa fa-archive"> Inventory</i></a>
+  <a href="#"><i class="fa fa-flag"> Report</i></a>
+  <a href="#"><i class="fa fa-power-off"> Logout</i></a>

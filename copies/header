@@ -1,0 +1,10 @@
+    <div class="fixed-top">
+      <div id="header" class="row bg-primary">
+        <div class="col-4">
+          <p class="ml-3">Supplies Management System</p>
+        </div>
+        <div class="col-8 text-right line_space">
+          <!-- <div class="line_space">Welcome!<br>Homer Salazar</div> -->
+          <span>Welcome!</span><br><span>Homer Salazar</span> 
+      </div>
+    </div>

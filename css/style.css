@@ -1,0 +1,195 @@
+.sticky_top{
+    background: #0275d8;
+    height: 40px;
+    color: #EEFBFB;
+    width: 101%;
+}
+
+.middle{
+  width: 15%;
+  margin-left: 690px;
+  margin-top: 5px;
+}
+
+#main{
+  margin-left: 170px;
+}
+
+#detail{
+  margin-left: 450px;
+  margin-right: 300px;
+  margin-top: 20px;
+}
+
+.tables{
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: bolder;
+  color: whitesmoke;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#hr {
+  border-top: 1px solid white;
+  padding: 0px;
+}
+#btn1{
+  border: none;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.title{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nms{
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#badges{
+  border-radius: 90px;
+  font-size: 12px;
+}
+
+.bluebox{
+  margin-left: 60px;
+  margin-top: 40px;
+  background-color: #FFFFFF !important;
+  border: 2px solid #FFFFFF;
+  border-left: 3px solid blue;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.customer{
+  color: blue;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.record{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.greenbox{
+  margin-left: 60px;
+  margin-top: 40px;
+  background-color: #FFFFFF !important;
+  border: 2px solid #FFFFFF;
+  border-left: 3px solid green;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.employee{
+  color: green;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+
+.aquabox{
+  margin-left: 60px;
+  margin-top: 40px;
+  background-color: #FFFFFF !important;
+  border: 2px solid #FFFFFF;
+  border-left: 3px solid skyblue;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.product{
+  color: skyblue;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.redbox{
+  margin-left: 60px;
+  margin-top: 40px;
+  background-color: #FFFFFF !important;
+  border: 2px solid #FFFFFF;
+  border-left: 3px solid red;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.supplier{
+  color: red;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.yellowbox{
+  margin-left: 60px;
+  margin-top: 40px;
+  background-color: #FFFFFF !important;
+  border: 2px solid #FFFFFF;
+  border-left: 3px solid yellow;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.account{
+  color: yellow;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+
+
+body {
+  font-family: 'Times New Roman', Times, serif;    
+  background: 	#f7f7f7 !important;
+  }
+  
+
+  .sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 40px;
+    left: 0;
+    background-color: #213159;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+  }
+  
+  .sidenav a {
+    font-family: 'Times New Roman', Times, serif;    
+    padding: 15px 8px 5px 22px;
+    text-decoration: none !important;
+    font-size: 18px;
+    color: #EEFBFB;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #007CC7;
+  }
+  
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .bwidths{
+    width: 120%;
+  }
+
+  .selectop{
+    width: 10%;
+  }

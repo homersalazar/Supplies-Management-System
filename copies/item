@@ -1,0 +1,291 @@
+<?php 
+require_once("../included/connection.php");
+require_once("../included/header.php");
+require_once("../included/navigation.php");
+?>
+<div class="row">
+    <div id="main" class="col-10 mt-3">
+        <div class="card">
+            <div class="card-header">
+                Item Details
+            </div>
+            <div class="card-body">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Add Item</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Edit Item</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Add Quantity</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <form action="" method="POST" id="add_item">
+                            <div class="row">
+                                <div class="col-4 mt-2 ml-2">
+                                    <label for="">Item name</label>
+                                    <input type="text" id="item_name" name="item_name" class="form-control form-control-sm" autocomplete="off">
+                                </div>
+                                <div class="col-2 mt-2">
+                                    <label for="">Quantity</label>
+                                    <input type="text" name="quantity" class="form-control form-control-sm" autocomplete="off" required disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 mt-2 ml-2">
+                                    <label for="">Size</label>
+                                    <input type="text" id="size" name="size" class="form-control form-control-sm" autocomplete="off" required>
+                                </div>
+                                <div class="col-3 mt-2 ">
+                                    <label for="unit">Unit</label>
+                                    <select name="unit" id="unit" class="form-control form-control-sm">
+                                        <option value="" Selected disabled>Select Unit</option>
+                                        <option value="Pieces">Pieces</option>
+                                        <option value="Packs">Packs</option>
+                                        <option value="Rim">Rim</option>
+                                        <option value="Box">Box</option>
+                                        <option value="Liter">Liter</option>
+                                    </select>                            
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2 mt-2 ml-2">
+                                    <label for="">Color</label>
+                                    <input type="text" id="color" name="color" class="form-control form-control-sm" autocomplete="off" required>
+                                </div>
+                                <div class="col-4 mt-2 ">
+                                    <label for="">Category</label>
+                                    <select name="category" id="category" class="form-control form-control-sm">
+                                        <option value="" Selected disabled>Select Category</option>
+                                        <option value="Writing Utensils">Writing Utensils</option>
+                                        <option value="Cleaning Material">Cleaning Material</option>
+                                        <option value="Paper Supplies">Paper Supplies</option>
+                                        <option value="Filing Supplies">Filing Supplies</option>
+                                        <option value="Office Supplies">Office Supplies</option>
+                                        <option value="Equipment">Equipment</option>
+                                    </select>                               
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 mt-2 ml-2">
+                                    <label for="">Description</label>
+                                    <input type="text" id="description" name="description" class="form-control form-control-sm" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 mt-4 ml-2">
+                                    <button type="button" name="add" id="add" class="btn btn-success btn-sm">Add Item</button>
+                                    <input type="reset" class="btn btn-light btn-sm" value="Clear">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <form action="" method="POST">
+                            <div class="row">
+                                <div class="col-4 mt-2 ml-2">
+                                    <label>Item name</label>  
+                                    <input type="text" name="edit_name" id="edit_name" class="form-control form-control-sm" autocomplete="off">  
+                                    <div id="itemList"></div>  
+                                </div>
+                                <div class="col-2 mt-2">
+                                    <label for="">Quantity</label>
+                                    <input type="number" name="edit_quantity" id="edit_quantity" class="form-control form-control-sm"  autocomplete="off" required readonly>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 mt-2 ml-2">
+                                    <label for="">Size</label>
+                                    <input type="text" name="edit_size" id="edit_size" class="form-control form-control-sm"  autocomplete="off" required readonly>
+                                </div>
+                                <div class="col-3 mt-2 ">
+                                    <label>Unit</label>
+                                    <select name="edit_unit" id="edit_unit" class="form-control form-control-sm"  required readonly>
+                                        <option value="" Selected disabled>Select Unit</option>
+                                        <option value="Pieces">Pieces</option>
+                                        <option value="Packs">Packs</option>
+                                        <option value="Box">Box</option>
+                                        <option value="Liter">Liter</option>
+                                    </select>                            
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2 mt-2 ml-2">
+                                    <label for="">Color</label>
+                                    <input type="text" name="edit_color" id="edit_color" class="form-control form-control-sm"  autocomplete="off" required readonly>
+                                </div>
+                                <div class="col-4 mt-2 ">
+                                    <label for="">Category</label>
+                                    <select name="edit_category" id="edit_category"  class="form-control form-control-sm" readonly>
+                                        <option value="" Selected disabled>Select Category</option>
+                                        <option value="Writing Utensils">Writing Utensils</option>
+                                        <option value="Cleaning Material">Cleaning Material</option>
+                                        <option value="Paper Supplies">Paper Supplies</option>
+                                        <option value="Filing Supplies">Filing Supplies</option>
+                                        <option value="Office Supplies">Office Supplies</option>
+                                        <option value="Equipment">Equipment</option>
+                                    </select>                               
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 mt-2 ml-2">
+                                    <label>Description</label>
+                                    <input type="text" name="edit_description" id="edit_description" class="form-control form-control-sm"  autocomplete="off" required readonly> 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 mt-4 ml-2">
+                                    <input type="text" id="edit_id" name="edit_id" class="form-control">
+                                    <button type="button" class="btn btn-info btn-sm">Update</button>
+                                    <input type="reset" class="btn btn-danger btn-sm" value="Clear">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <?php
+                            $sql = "SELECT * FROM office_supply";
+                            $result = mysqli_query($conn, $sql);  
+                        ?>
+                        <form action="" method="POST" class="mt-2">
+                            <table id="Tablelist" class="table tbl">
+                                <thead>
+                                    <tr>
+                                        <th width="20%">Item name</th>
+                                        <th width="10%">Quantity</th>
+                                        <th width="10%">Size</th>
+                                        <th width="10%">Unit</th>
+                                        <th width="10%">Color</th>
+                                        <th width="10%">Status</th>
+                                        <th width="20%">Description</th>
+                                        <th width="5%">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php  while($row = mysqli_fetch_array($result)){ 
+                                        $status = "";
+                                        $qty = $row["quantity"];
+                                    if($qty <= 5){
+                                        $status = "Low Stock";
+                                        $color = 'class="text-warning"';
+                                    }else{
+                                        echo "";
+                                    }   
+                                    if($qty == 0){
+                                        $status = "Out of Stock"; 
+                                        $color = 'class="text-danger"';
+                                    }else{
+                                        echo "";
+                                    }
+                                    if($qty > 5){
+                                        $status = "Available";
+                                        $color = 'class="text-success"';
+
+                                    }else{
+                                        echo "";
+                                    }
+                                    ?>
+                                        <tr>
+                                            <th scope="row"><?php echo $row['item_name']; ?></th>
+                                            <td><?php echo $row['quantity']; ?></td>
+                                            <td><?php echo $row['size']; ?></td>
+                                            <td><?php echo $row['unit']; ?></td>
+                                            <td><?php echo $row['color']; ?></td>
+                                            <td <?php echo $color; ?>><?php echo $status; ?></td>
+                                            <td><?php echo $row['description']; ?></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn fa fa-cog  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" onclick="edit_add_qty()">Add Quantity</a>    
+                                                        <a class="dropdown-item" href="#">View</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <?php  }   ?>  
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function edit_add_qty(){
+        $('#edit_receipt_Modal').modal('show');
+
+    }
+    function edit_supply(edit_id , edit_quantity , edit_size , edit_unit , edit_color , edit_category , edit_description){
+        document.getElementById("edit_id").value = edit_id;
+        document.getElementById("edit_quantity").value = edit_quantity;
+        document.getElementById("edit_size").value = edit_size;
+        document.getElementById("edit_unit").value = edit_unit;
+        document.getElementById("edit_color").value = edit_color;
+        document.getElementById("edit_category").value = edit_category;
+        document.getElementById("edit_description").value = edit_description;
+    }
+    $(document).ready(function(){
+        $('#edit_name').keyup(function(){  
+           var query = $(this).val();  
+           if(query != '')  
+           {  
+                $.ajax({  
+                     url:"search.php",  
+                     method:"POST",  
+                     data:{query:query},  
+                     success:function(data){  
+                        $('#itemList').fadeIn();  
+                        $('#itemList').html(data);  
+                    }  
+                });  
+            }  
+        });  
+        $(document).on('click', '#li', function(){  
+            $('#edit_name').val($(this).text());  
+            $('#itemList').fadeOut();  
+        });  
+
+        $('#add').on('click', function() {
+            var item_name=$("#item_name").val();
+            var size=$("#size").val();
+            var unit=$("#unit").val();
+            var color=$("#color").val();
+            var category=$("#category").val();
+            var description=$("#description").val();
+            $.ajax({
+                url:'add_item_function.php',
+                method:'POST',
+                data:{
+                    item_name:item_name,
+                    size:size,
+                    unit:unit,
+                    color:color,
+                    category:category,
+                    description:description
+                },
+                success:function(data){
+                    alert("Item added successfully");
+                    window.location.reload();
+                }
+            });  
+        });  
+
+        $('#Tablelist').DataTable();
+
+
+    });
+
+</script>
+<?php
+require_once("../included/footer.php");
+?>
+
