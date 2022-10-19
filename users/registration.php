@@ -166,7 +166,7 @@ if (isset($_POST['submit'])) {
         }
     </style>
     <body>
-        <div id="login-box">
+        <div id="login-box">    
             <form action="" method="POST">
                 <div class="left">
                     <h1><b>Sign up</b></h1>

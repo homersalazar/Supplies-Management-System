@@ -221,7 +221,7 @@
                     <div class="row">
                         <div class="col-12">
                             <input type="text" name="item_name" id="item_name" class="form-control form-control-sm" placeholder="Search Item Name" required autocomplete="off" required>
-                        <small><div id="itemList" class="p-2"></div> </small>  
+                        <small><div id="itemList" class="border border-top-0"></div> </small>  
                         </div>
                     </div>
                     <div class="row">

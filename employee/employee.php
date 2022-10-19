@@ -151,7 +151,9 @@
             });  
         }); 
 
-        $('#customer_table').DataTable();
+        $('#customer_table').DataTable({
+            "dom": 'lrtip'
+        });
     });
 </script>
 <?php

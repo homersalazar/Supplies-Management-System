@@ -193,3 +193,21 @@ body {
   .selectop{
     width: 10%;
   }
+
+  #itemList{
+    position: absolute;
+    padding: 0%;
+    margin: 0%;
+    z-index: 99 !important;
+    background: white;
+  }
+
+  #itemList{
+    position: absolute;
+    z-index: 99 !important;
+    background-color: white;
+    border-radius: 2%;
+    width: 348px;
+    font-size: 14px;
+    width: 465px;  
+  }
