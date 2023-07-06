@@ -2,7 +2,7 @@
 require_once("../included/connection.php");
      if(isset($_POST["query"])){  
           $output = '';  
-          $sql = "SELECT * FROM product WHERE item_name LIKE '%".$_POST["query"]."%' or color LIKE '%".$_POST["query"]."%' LIMIT 5";  
+          $sql = "SELECT * FROM product WHERE item_name LIKE '%".$_POST["query"]."%' or color LIKE '%".$_POST["query"]."%' LIMIT 10";  
           $result = mysqli_query($conn, $sql);  
           $output = '<ul class="list-unstyled">';  
      if(mysqli_num_rows($result) > 0){  

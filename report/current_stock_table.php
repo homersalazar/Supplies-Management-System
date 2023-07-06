@@ -23,12 +23,12 @@
             <div id="print" class="row">
                 <table id="stock_table" class="table table-bordered">
                     <thead class="thead-light pt-2">
-                        <th style='width: 20%; text-align:left; padding-left:50px; !important'>Item Name</th>
-                        <th style='width: 14%; text-align:center; !important'>Quantity</th>
-                        <th style='width: 14%; text-align:center; !important'>Unit</th>
-                        <th style='width: 14%; text-align:center; !important'>Color</th>
-                        <th style='width: 14%; text-align:center; !important'>Size</th>
-                        <th style='width: 20%; text-align:left; !important'>Category</th>
+                        <th style='width: 20%; text-align:left; padding-left:50px;'>Item Name</th>
+                        <th style='width: 14%; text-align:center;'>Quantity</th>
+                        <th style='width: 14%; text-align:center;'>Unit</th>
+                        <th style='width: 14%; text-align:center;'>Color</th>
+                        <th style='width: 14%; text-align:center;'>Size</th>
+                        <th style='width: 20%; text-align:left;'>Category</th>
                     </thead>
                     <thead>
                         <?php                                    

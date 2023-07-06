@@ -231,7 +231,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12 mt-2">
-                            <!-- <input type="text" name="add_date" id="add_date" class="form-control form-control-sm" value="2022-8-1" readonly> -->
+                            <!-- <input type="text" name="add_date" id="add_date" class="form-control form-control-sm" value="2023-1-10" readonly> -->
                             <input type="date" name="add_date" id="add_date" class="form-control form-control-sm" required>
                         </div>
                     </div>
