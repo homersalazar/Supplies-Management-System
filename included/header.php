@@ -26,6 +26,7 @@ require_once("../users/auth.php");
     <script src="../js/live_time.js"></script>
     <script src="../js/export_to_excel.js"></script>
     <script src="../js/print.js"></script>
+    <script src="../js/print_mpr.js"></script>
 
 
 </head>

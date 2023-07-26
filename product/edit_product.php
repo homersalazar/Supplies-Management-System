@@ -27,6 +27,12 @@
                     <input type="text" name="item_name" id="item_name" class="form-control form-control-sm" autocomplete="off" value="<?php echo $row['item_name']; ?>">
                 </div>
                 <div class="col-3 text-right text-info mt-3">
+                    <label>ALU:</label>
+                </div>
+                <div class="col-9 mt-3">
+                    <input type="text" name="item_code" id="item_code" class="form-control form-control-sm" autocomplete="off"  value="<?php echo $row['item_code']; ?>">
+                </div>
+                <div class="col-3 text-right text-info mt-3">
                     <label>Size:</label>
                 </div>
                 <div class="col-9 mt-3">

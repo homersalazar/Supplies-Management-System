@@ -25,6 +25,7 @@
                         <thead class="thead-light">
                             <tr>
                             <th width="15%">Item Name</th>
+                            <th width="12%">Item Code</th>
                             <th width="12%">Color</th>
                             <th width="12%">Size</th>
                             <th width="12%">Unit</th>
@@ -36,6 +37,7 @@
                             <?php  while($row = mysqli_fetch_array($result)){ ?>  
                                 <tr>
                                     <td><?php echo $row['item_name']; ?></td>
+                                    <td><?php echo $row['item_code']; ?></td>
                                     <td><?php echo $row['color']; ?></td>
                                     <td><?php echo $row['size']; ?></td>
                                     <td><?php echo $row['unit']; ?></td>

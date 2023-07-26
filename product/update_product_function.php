@@ -4,12 +4,13 @@
     $id = $_GET['id'];
     if(isset($_POST['submit'])){
         $item_name  = ucwords($_POST["item_name"]);  
+        $item_code  = $_POST["item_code"];  
         $unit = ucwords($_POST["unit"]);  
         $size = ucwords($_POST["size"]);  
         $category= ucwords($_POST["category"]);  
         $color = ucwords($_POST["color"]);  
         $remarks = $_POST['disc'];
-        $sql = "UPDATE product SET item_name = '$item_name', unit = '$unit', size = '$size', category = '$category', color = '$color', description = '$remarks' WHERE id = '$id' ";
+        $sql = "UPDATE product SET item_name = '$item_name', item_code = '$item_code', unit = '$unit', size = '$size', category = '$category', color = '$color', description = '$remarks' WHERE id = '$id' ";
         $conn->query($sql) or die ($conn->error);
         $_SESSION['msg'] = 'Update successfully !';
         header("Location: ../product/product.php"); 

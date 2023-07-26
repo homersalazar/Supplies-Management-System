@@ -35,6 +35,11 @@
                         <div class="col-2 ml-4">
                             <a href="out_stock_list.php" type="button" class="btn btn-primary bwidths fa fa-align-center"> Out Of Stock List</a>
                         </div>
+                        <div class="col-2 ml-4">
+                            <a href="requestForPurchase.php" type="button" class="btn btn-primary bwidths fa fa-align-center">
+                                MPR
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
