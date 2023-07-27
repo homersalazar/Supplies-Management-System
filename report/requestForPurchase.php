@@ -42,7 +42,9 @@
         .top{
             border-top: 1px solid black;
         }
-
+        .width{
+            width: 20%;
+        }
         /* Add any other styles as needed for the table */
     </style>
     <div class="container">
@@ -61,10 +63,10 @@
                         <thead>
                             <tr>
                                 <th>DATE:</th>
-                                <td class="top"><?= date("Y-m-d") ?></td>
+                                <td colspan="4" class="top"><?= date("Y-m-d") ?></td>
                             </tr>
                             <tr>
-                                <th width="20%">PROJECT SITE:</th>
+                                <th style="width: 25%">PROJECT SITE:</th>
                                 <td colspan="4" class="top">Main Office</td>
                             </tr>
                             <tr>

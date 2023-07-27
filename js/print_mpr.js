@@ -6,7 +6,7 @@ function print_mpr() {
     // Include the CSS styles from the original page
     a.document.write('<style>' + window.document.getElementsByTagName('style')[0].innerHTML + '</style>');
     a.document.write('</head>');
-    a.document.write('<body> <h1 style="text-align:center;">GLOBAL HEAVY EQUIPMENT AND CONSTRUCTION CORP.</h1> <h3 style="text-align:center;">MATERIALS/PARTS REQUEST FORM</h3> <br>');
+    a.document.write('<body> <h2 style="text-align:center;">GLOBAL HEAVY EQUIPMENT AND CONSTRUCTION CORP.</h2> <h3 style="text-align:center;">MATERIALS/PARTS REQUEST FORM</h3> <br>');
     a.document.write(divContents);
     a.document.write('</body></html>');
     a.document.close();

@@ -7,7 +7,7 @@
     $result = mysqli_query($conn, $sql);  
 ?>  
 <div id="main">
-<div class="row ml-5 mt-4">
+    <div class="row ml-5 mt-4">
         <div class="col-11">
             <div class="card">
                 <div class="card-header">

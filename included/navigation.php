@@ -17,6 +17,7 @@ require_once("../included/connection.php");
     <a href="../customer/customer.php">Employee</a>
     <a href="../product/product.php">Product</a>
     <a href="../transaction/transaction.php">Transaction</a>
+    <a href="../mpr/index.php">MPR</a>
     <a href="../inventory/inventory.php">Order List</a>
     <a href="../cart/cart.php">Purchase</a>
     <a href="../panel/control_panel.php">Control Panel</a>
